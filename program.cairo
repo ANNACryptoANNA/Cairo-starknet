@@ -191,3 +191,11 @@ elif output_format == "csv":
             writer.writerow({"key": item.key, "value": item.value})
 else:
     print("Invalid output format selected.")
+
+  try:
+    # Try to parse user input as integers.
+    size = int(size)
+    filter_key = int(filter_key)
+    agg_keys = [int(key) for key in agg_keys.split(",")]
+except ValueError:
+    print("Invalid input. Please enter valid integers.")
