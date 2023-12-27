@@ -161,3 +161,13 @@ filter_key = int(filter_key)
 
 # Filter the result by the specified key.
 filtered_result = [item for item in result if item.key == filter_key]
+
+# Prompt the user to enter keys for aggregation.
+agg_keys = input("Enter keys for aggregation (comma-separated): ")
+agg_keys = [int(key) for key in agg_keys.split(",")]
+
+# Calculate  sum of values for specified keys.
+agg_result = {}
+for key in agg_keys:
+    key_sum = sum(item.value for item in result if item.key == key)
+    agg_result[key] = key_sum
