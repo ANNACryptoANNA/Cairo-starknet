@@ -227,3 +227,10 @@ output_file = input("Enter the output file name: ")
 with open(output_file, "w") as file:
     for item in result:
         file.write(f"Key: {item.key}, Value: {item.value}\n")
+
+  try:
+    with open(output_file, "w") as file:
+        for item in result:
+            file.write(f"Key: {item.key}, Value: {item.value}\n")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
