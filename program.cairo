@@ -264,3 +264,12 @@ elif agg_function == "avg":
     # ...
 else:
     print("Invalid aggregation function selected.")
+
+ import logging
+import datetime
+
+# Configure logging with timestamps.
+logging.basicConfig(filename="program.log", level=logging.DEBUG, format="%(asctime)s - %(levelname)s: %(message)s")
+
+# Add detailed logging statements.
+logging.debug(f"Build_dict: dict.new_value = {dict.new_value}")
