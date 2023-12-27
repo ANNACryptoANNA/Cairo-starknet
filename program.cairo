@@ -155,3 +155,9 @@ func main{output_ptr: felt*, range_check_ptr}():
   # Sort the result by key.
   result = sorted(result, key=lambda x: x.key)
   
+  # Prompt the user to enter a key for filtering.
+filter_key = input("Enter a key for filtering: ")
+filter_key = int(filter_key)
+
+# Filter the result by the specified key.
+filtered_result = [item for item in result if item.key == filter_key]
