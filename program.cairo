@@ -140,14 +140,18 @@ func main{output_ptr: felt*, range_check_ptr}():
     return ()
     
     # Prompt the user to enter the size of the input list.
-size = input("Enter the size of the input list: ")
-size = int(size)
+  size = input("Enter the size of the input list: ")
+  size = int(size)
 
-# Initialize an empty list to store key-value pairs.
-input_list = []
+  # Initialize an empty list to store key-value pairs.
+  input_list = []
 
-# Read key-value pairs from the user.
-for i in range(size):
+  # Read key-value pairs from the user.
+  for i in range(size):
     key = input(f"Enter key for pair {i + 1}: ")
     value = input(f"Enter value for pair {i + 1}: ")
     input_list.append(KeyValue(key=int(key), value=int(value)))
+
+  # Sort the result by key.
+  result = sorted(result, key=lambda x: x.key)
+  
