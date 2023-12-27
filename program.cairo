@@ -305,3 +305,26 @@ except Exception as e:
 
  # Remove unused variables and comments.
 # ...
+
+"""
+Cairo Program
+
+This program allows the user to perform various operations on a list of key-value pairs.
+
+Features:
+- Input list creation.
+- Filtering by key.
+- Aggregation functions (sum, min, max, avg).
+- Writing results to a file.
+- Error handling and user-friendly messages.
+
+Usage:
+- Run the program and follow the prompts.
+
+Author: [Your Name]
+Date: [Date]
+"""
+
+# ...
+
+# Add final documentation.
