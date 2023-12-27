@@ -284,3 +284,10 @@ except PermissionError:
     print(f"Permission denied to write to '{output_file}'.")
 except Exception as e:
     print(f"An error occurred: {str(e)}")
+
+# Provide user-friendly instructions and messages.
+print("Welcome to the Cairo Program!")
+
+# ...
+
+print("Result written to the specified file successfully.")
