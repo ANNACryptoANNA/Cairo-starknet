@@ -302,3 +302,6 @@ except ValueError:
     print("Invalid input. Please enter a valid non-negative integer for size.")
 except Exception as e:
     print(f"An unexpected error occurred: {str(e)}")
+
+ # Remove unused variables and comments.
+# ...
