@@ -171,3 +171,23 @@ agg_result = {}
 for key in agg_keys:
     key_sum = sum(item.value for item in result if item.key == key)
     agg_result[key] = key_sum
+
+ # Prompt the user to select the output format.
+output_format = input("Select the output format (JSON/CSV): ").lower()
+
+if output_format == "json":
+    # Output result in JSON format.
+    import json
+    with open("result.json", "w") as json_file:
+        json.dump(result, json_file)
+elif output_format == "csv":
+    # Output result in CSV format.
+    import csv
+    with open("result.csv", "w", newline="") as csv_file:
+        fieldnames = ["key", "value"]
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        for item in result:
+            writer.writerow({"key": item.key, "value": item.value})
+else:
+    print("Invalid output format selected.")
