@@ -273,3 +273,14 @@ logging.basicConfig(filename="program.log", level=logging.DEBUG, format="%(ascti
 
 # Add detailed logging statements.
 logging.debug(f"Build_dict: dict.new_value = {dict.new_value}")
+ 
+try:
+    with open(output_file, "w") as file:
+        for item in result:
+            file.write(f"Key: {item.key}, Value: {item.value}\n")
+except FileNotFoundError:
+    print(f"Output file '{output_file}' not found.")
+except PermissionError:
+    print(f"Permission denied to write to '{output_file}'.")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
