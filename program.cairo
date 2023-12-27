@@ -234,3 +234,15 @@ with open(output_file, "w") as file:
             file.write(f"Key: {item.key}, Value: {item.value}\n")
 except Exception as e:
     print(f"An error occurred: {str(e)}")
+
+ try:
+    size = int(size)
+    if size < 0:
+        print("Size must be a non-negative integer.")
+    else:
+        # Proceed with input list creation.
+        input_list = []
+        for i in range(size):
+            # ...
+except ValueError:
+    print("Invalid input. Please enter a valid non-negative integer for size.")
