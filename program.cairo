@@ -291,3 +291,14 @@ print("Welcome to the Cairo Program!")
 # ...
 
 print("Result written to the specified file successfully.")
+
+ try:
+    # ...
+except FileNotFoundError as e:
+    print(f"Error: {str(e)}")
+except PermissionError as e:
+    print(f"Error: {str(e)}")
+except ValueError:
+    print("Invalid input. Please enter a valid non-negative integer for size.")
+except Exception as e:
+    print(f"An unexpected error occurred: {str(e)}")
