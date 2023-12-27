@@ -212,3 +212,10 @@ def build_dict(list, size, dict):
     # ...
 
 # Add logging statements to other functions as needed.
+
+ # Document the purpose of the filtering section.
+"""
+In this section, the program allows the user to filter the result by a specified key.
+The user is prompted to enter a key, and the program filters the result to include only
+items with the specified key.
+"""
