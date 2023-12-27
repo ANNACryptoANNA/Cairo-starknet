@@ -246,3 +246,21 @@ except Exception as e:
             # ...
 except ValueError:
     print("Invalid input. Please enter a valid non-negative integer for size.")
+
+ # Prompt the user to select an aggregation function.
+agg_function = input("Select an aggregation function (sum/min/max/avg): ").lower()
+
+if agg_function == "sum":
+    # Calculate sums of values for specified keys.
+    # ...
+elif agg_function == "min":
+    # Calculate minimum values for specified keys.
+    # ...
+elif agg_function == "max":
+    # Calculate maximum values for specified keys.
+    # ...
+elif agg_function == "avg":
+    # Calculate average values for specified keys.
+    # ...
+else:
+    print("Invalid aggregation function selected.")
