@@ -199,3 +199,16 @@ else:
     agg_keys = [int(key) for key in agg_keys.split(",")]
 except ValueError:
     print("Invalid input. Please enter valid integers.")
+
+  import logging
+
+# Configure logging.
+logging.basicConfig(filename="program.log", level=logging.DEBUG)
+
+# Add logging statements to functions.
+def build_dict(list, size, dict):
+    # ...
+    logging.debug(f"Build_dict: dict.new_value = {dict.new_value}")
+    # ...
+
+# Add logging statements to other functions as needed.
